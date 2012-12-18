@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D1CE13B167F4F3A00638E21 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1CE13A167F4F3A00638E21 /* logo.png */; };
+		7D1CE142167F4F4B00638E21 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CE13F167F4F4B00638E21 /* GCDAsyncSocket.m */; };
+		7D1CE143167F4F4B00638E21 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1CE141167F4F4B00638E21 /* GCDAsyncUdpSocket.m */; };
+		7D1CE149167F50B900638E21 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1CE148167F50B900638E21 /* CFNetwork.framework */; };
+		7D1CE14C167F50C300638E21 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1CE14B167F50C300638E21 /* Security.framework */; };
+		7D1CE150167F510100638E21 /* off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1CE14E167F510100638E21 /* off.png */; };
+		7D1CE151167F510100638E21 /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1CE14F167F510100638E21 /* on.png */; };
+		7D22926B167F499D003F2F82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D22926A167F499D003F2F82 /* UIKit.framework */; };
+		7D22926D167F499D003F2F82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D22926C167F499D003F2F82 /* Foundation.framework */; };
+		7D22926F167F499D003F2F82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D22926E167F499D003F2F82 /* CoreGraphics.framework */; };
+		7D229275167F499D003F2F82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D229273167F499D003F2F82 /* InfoPlist.strings */; };
+		7D229277167F499D003F2F82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D229276167F499D003F2F82 /* main.m */; };
+		7D22927B167F499D003F2F82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D22927A167F499D003F2F82 /* AppDelegate.m */; };
+		7D22927D167F499D003F2F82 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D22927C167F499D003F2F82 /* Default.png */; };
+		7D22927F167F499D003F2F82 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D22927E167F499D003F2F82 /* Default@2x.png */; };
+		7D229281167F499D003F2F82 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D229280167F499D003F2F82 /* Default-568h@2x.png */; };
+		7D229284167F499D003F2F82 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D229283167F499D003F2F82 /* MasterViewController.m */; };
+		7D229287167F499D003F2F82 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D229286167F499D003F2F82 /* DetailViewController.m */; };
+		7D22928A167F499D003F2F82 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D229288167F499D003F2F82 /* MasterViewController.xib */; };
+		7D22928D167F499D003F2F82 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D22928B167F499D003F2F82 /* DetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D1CE13A167F4F3A00638E21 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		7D1CE13E167F4F4B00638E21 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		7D1CE13F167F4F4B00638E21 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		7D1CE140167F4F4B00638E21 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		7D1CE141167F4F4B00638E21 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		7D1CE148167F50B900638E21 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7D1CE14B167F50C300638E21 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7D1CE14E167F510100638E21 /* off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = off.png; sourceTree = "<group>"; };
+		7D1CE14F167F510100638E21 /* on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = on.png; sourceTree = "<group>"; };
+		7D229266167F499D003F2F82 /* NetSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D22926A167F499D003F2F82 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7D22926C167F499D003F2F82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7D22926E167F499D003F2F82 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7D229272167F499D003F2F82 /* NetSwitch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetSwitch-Info.plist"; sourceTree = "<group>"; };
+		7D229274167F499D003F2F82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D229276167F499D003F2F82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D229278167F499D003F2F82 /* NetSwitch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetSwitch-Prefix.pch"; sourceTree = "<group>"; };
+		7D229279167F499D003F2F82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7D22927A167F499D003F2F82 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7D22927C167F499D003F2F82 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7D22927E167F499D003F2F82 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7D229280167F499D003F2F82 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7D229282167F499D003F2F82 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		7D229283167F499D003F2F82 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		7D229285167F499D003F2F82 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7D229286167F499D003F2F82 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7D229289167F499D003F2F82 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		7D22928C167F499D003F2F82 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D229263167F499D003F2F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1CE14C167F50C300638E21 /* Security.framework in Frameworks */,
+				7D1CE149167F50B900638E21 /* CFNetwork.framework in Frameworks */,
+				7D22926B167F499D003F2F82 /* UIKit.framework in Frameworks */,
+				7D22926D167F499D003F2F82 /* Foundation.framework in Frameworks */,
+				7D22926F167F499D003F2F82 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D1CE13D167F4F4B00638E21 /* GCDAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				7D1CE13E167F4F4B00638E21 /* GCDAsyncSocket.h */,
+				7D1CE13F167F4F4B00638E21 /* GCDAsyncSocket.m */,
+				7D1CE140167F4F4B00638E21 /* GCDAsyncUdpSocket.h */,
+				7D1CE141167F4F4B00638E21 /* GCDAsyncUdpSocket.m */,
+			);
+			path = GCDAsyncSocket;
+			sourceTree = "<group>";
+		};
+		7D1CE14D167F510100638E21 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				7D1CE14E167F510100638E21 /* off.png */,
+				7D1CE14F167F510100638E21 /* on.png */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		7D22925B167F499D003F2F82 = {
+			isa = PBXGroup;
+			children = (
+				7D1CE14B167F50C300638E21 /* Security.framework */,
+				7D1CE148167F50B900638E21 /* CFNetwork.framework */,
+				7D1CE13A167F4F3A00638E21 /* logo.png */,
+				7D229270167F499D003F2F82 /* NetSwitch */,
+				7D229269167F499D003F2F82 /* Frameworks */,
+				7D229267167F499D003F2F82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D229267167F499D003F2F82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D229266167F499D003F2F82 /* NetSwitch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D229269167F499D003F2F82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D22926A167F499D003F2F82 /* UIKit.framework */,
+				7D22926C167F499D003F2F82 /* Foundation.framework */,
+				7D22926E167F499D003F2F82 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D229270167F499D003F2F82 /* NetSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				7D1CE14D167F510100638E21 /* Res */,
+				7D1CE13D167F4F4B00638E21 /* GCDAsyncSocket */,
+				7D229279167F499D003F2F82 /* AppDelegate.h */,
+				7D22927A167F499D003F2F82 /* AppDelegate.m */,
+				7D229282167F499D003F2F82 /* MasterViewController.h */,
+				7D229283167F499D003F2F82 /* MasterViewController.m */,
+				7D229285167F499D003F2F82 /* DetailViewController.h */,
+				7D229286167F499D003F2F82 /* DetailViewController.m */,
+				7D229288167F499D003F2F82 /* MasterViewController.xib */,
+				7D22928B167F499D003F2F82 /* DetailViewController.xib */,
+				7D229271167F499D003F2F82 /* Supporting Files */,
+			);
+			path = NetSwitch;
+			sourceTree = "<group>";
+		};
+		7D229271167F499D003F2F82 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D229272167F499D003F2F82 /* NetSwitch-Info.plist */,
+				7D229273167F499D003F2F82 /* InfoPlist.strings */,
+				7D229276167F499D003F2F82 /* main.m */,
+				7D229278167F499D003F2F82 /* NetSwitch-Prefix.pch */,
+				7D22927C167F499D003F2F82 /* Default.png */,
+				7D22927E167F499D003F2F82 /* Default@2x.png */,
+				7D229280167F499D003F2F82 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D229265167F499D003F2F82 /* NetSwitch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D229290167F499D003F2F82 /* Build configuration list for PBXNativeTarget "NetSwitch" */;
+			buildPhases = (
+				7D229262167F499D003F2F82 /* Sources */,
+				7D229263167F499D003F2F82 /* Frameworks */,
+				7D229264167F499D003F2F82 /* Resources */,
+				50524F424C454D533F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetSwitch;
+			productName = NetSwitch;
+			productReference = 7D229266167F499D003F2F82 /* NetSwitch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D22925D167F499D003F2F82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = twotrees;
+			};
+			buildConfigurationList = 7D229260167F499D003F2F82 /* Build configuration list for PBXProject "NetSwitch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7D22925B167F499D003F2F82;
+			productRefGroup = 7D229267167F499D003F2F82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D229265167F499D003F2F82 /* NetSwitch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D229264167F499D003F2F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D229275167F499D003F2F82 /* InfoPlist.strings in Resources */,
+				7D22927D167F499D003F2F82 /* Default.png in Resources */,
+				7D22927F167F499D003F2F82 /* Default@2x.png in Resources */,
+				7D229281167F499D003F2F82 /* Default-568h@2x.png in Resources */,
+				7D22928A167F499D003F2F82 /* MasterViewController.xib in Resources */,
+				7D22928D167F499D003F2F82 /* DetailViewController.xib in Resources */,
+				7D1CE13B167F4F3A00638E21 /* logo.png in Resources */,
+				7D1CE150167F510100638E21 /* off.png in Resources */,
+				7D1CE151167F510100638E21 /* on.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50524F424C454D533F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D229262167F499D003F2F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D229277167F499D003F2F82 /* main.m in Sources */,
+				7D22927B167F499D003F2F82 /* AppDelegate.m in Sources */,
+				7D229284167F499D003F2F82 /* MasterViewController.m in Sources */,
+				7D229287167F499D003F2F82 /* DetailViewController.m in Sources */,
+				7D1CE142167F4F4B00638E21 /* GCDAsyncSocket.m in Sources */,
+				7D1CE143167F4F4B00638E21 /* GCDAsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D229273167F499D003F2F82 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D229274167F499D003F2F82 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7D229288167F499D003F2F82 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D229289167F499D003F2F82 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		7D22928B167F499D003F2F82 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D22928C167F499D003F2F82 /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D22928E167F499D003F2F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7D22928F167F499D003F2F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D229291167F499D003F2F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NetSwitch/NetSwitch-Prefix.pch";
+				INFOPLIST_FILE = "NetSwitch/NetSwitch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7D229292167F499D003F2F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NetSwitch/NetSwitch-Prefix.pch";
+				INFOPLIST_FILE = "NetSwitch/NetSwitch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D229260167F499D003F2F82 /* Build configuration list for PBXProject "NetSwitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D22928E167F499D003F2F82 /* Debug */,
+				7D22928F167F499D003F2F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D229290167F499D003F2F82 /* Build configuration list for PBXNativeTarget "NetSwitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D229291167F499D003F2F82 /* Debug */,
+				7D229292167F499D003F2F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D22925D167F499D003F2F82 /* Project object */;
+}
