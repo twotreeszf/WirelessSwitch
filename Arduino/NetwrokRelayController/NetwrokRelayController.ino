@@ -8,7 +8,7 @@
 const int           RELAY_PINS[4] = { 6, 7, 8, 9 };
 const int           AUTO_SIG_PIN = 5;
 
-unsigned long       REBOOT_TIME = (1 * 24 * 60 * 60 * 1000);
+unsigned long       REBOOT_TIME = (12 * 60 * 60 * 1000);
 
 byte                MAC_ADDR[]  = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x56 };
 const unsigned int  LOCAL_PORT  = 29979;
@@ -52,6 +52,7 @@ void setup()
 void loop() 
 {
     // check if need reboot
+    /*
     if (millis() > REBOOT_TIME)
     {
         static int inReboot = false;
@@ -63,7 +64,7 @@ void loop()
         }
         
         return;
-    }
+    }*/
 
     // check auto signal, control relay 4
     if (LOW ==  digitalRead(AUTO_SIG_PIN))
