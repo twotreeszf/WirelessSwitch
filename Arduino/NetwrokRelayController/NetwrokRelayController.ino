@@ -3,51 +3,74 @@
 #include <SPI.h>
 #include <Ethernet.h>
 #include <EthernetUdp.h>
+#include <avr/wdt.h>
 
-byte                MAC_ADDR[]      = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x56 };
-const unsigned int  LOCAL_PORT      = 29979;
+const int           RELAY_PINS[4] = { 6, 7, 8, 9 };
+const int           AUTO_SIG_PIN = 5;
 
-EthernetUDP UDP;
-long        lastBroadCastTime = 0;
-IPAddress   BROADCAST_IP_ADDR(0XFFFFFFFF);
-const char* MY_NAME = "TwoTrees Relay Controller";
+unsigned long       REBOOT_TIME = (1 * 24 * 60 * 60 * 1000);
 
-EthernetServer SERVER(29978);
-const int RELAY1 = 6;
-const int RELAY2 = 7;
-const int RELAY3 = 8;
-const int RELAY4 = 9;
+byte                MAC_ADDR[]  = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x56 };
+const unsigned int  LOCAL_PORT  = 29979;
 
-const int BUFFER_LEN    = 24;
-byte BUFFER[BUFFER_LEN] = {0};
+EthernetUDP         UDP;
+long                lastBroadCastTime = 0;
+IPAddress           BROADCAST_IP_ADDR(0XFFFFFFFF);
+const char*         MY_NAME = "TwoTrees Arduino";
 
-void setup()
+EthernetServer      SERVER(29978);
+
+
+const int           BUFFER_LEN    = 24;
+byte                BUFFER[BUFFER_LEN] = {0};
+
+void setup() 
 {
+    // init relay conrol pins as output mode
+    for (int i = 0; i < 4; ++i)
+    {
+        pinMode(RELAY_PINS[i], OUTPUT);
+        digitalWrite(RELAY_PINS[i], LOW);
+    }
+
+    // init auto signal pin as input mode
+    pinMode(AUTO_SIG_PIN, INPUT_PULLUP);
+
     lastBroadCastTime = millis();
 
     Serial.begin(9600);
 
-    Ethernet.begin(MAC_ADDR);
-    Serial.println(Ethernet.localIP());
+    while (!Ethernet.begin(MAC_ADDR))
+        Serial.println(Ethernet.localIP());
 
-    UDP.begin(LOCAL_PORT);
+    while (!UDP.begin(LOCAL_PORT))
+        ;
+
     SERVER.begin();
-
-    pinMode(RELAY1, OUTPUT);
-    digitalWrite(RELAY1, LOW);
-
-    pinMode(RELAY2, OUTPUT);
-    digitalWrite(RELAY2, LOW);
-
-    pinMode(RELAY3, OUTPUT);
-    digitalWrite(RELAY3, LOW);
-
-    pinMode(RELAY4, OUTPUT);
-    digitalWrite(RELAY4, LOW);
 }
 
-void loop()
+void loop() 
 {
+    // check if need reboot
+    if (millis() > REBOOT_TIME)
+    {
+        static int inReboot = false;
+
+        if (!inReboot)
+        {
+            wdt_enable(WDTO_15MS);
+            inReboot = true;
+        }
+        
+        return;
+    }
+
+    // check auto signal, control relay 4
+    if (LOW ==  digitalRead(AUTO_SIG_PIN))
+        digitalWrite(RELAY_PINS[4 - 1], HIGH);
+    else
+        digitalWrite(RELAY_PINS[4 - 1], LOW);
+
     // broadcast self info
     long curTime = millis();
     if (curTime - lastBroadCastTime > 1000)
@@ -62,7 +85,7 @@ void loop()
 
     // relay controller http server
     EthernetClient client = SERVER.available();
-    if (client)
+    if (client) 
     {
         Serial.println("new client");
 
@@ -72,59 +95,29 @@ void loop()
             Serial.println((char*)BUFFER);
 
             String cmd = (char*)BUFFER;
-            if (String("Q") == cmd)
+            char c = cmd.charAt(0);
+            if ('Q' == c)
             {
                 String ret;
-                digitalRead(RELAY1) ? ret += '1' : ret += '0';
-                digitalRead(RELAY2) ? ret += '1' : ret += '0';
-                digitalRead(RELAY3) ? ret += '1' : ret += '0';
-                digitalRead(RELAY4) ? ret += '1' : ret += '0';
+                for (int i = 0; i < 4; ++i)
+                    digitalRead(RELAY_PINS[i]) ? ret += '1' : ret += '0';
 
                 client.write(&ret[0]);
             }
-            else if (cmd.charAt(0) == 'O')
+            else if  ('O' == c || 'F' == c)
             {
-                char relay = cmd.charAt(1);
-                switch (relay)
-                {
-                case '1':
-                    digitalWrite(RELAY1, HIGH);
-                    break;
-                case '2':
-                    digitalWrite(RELAY2, HIGH);
-                    break;
-                case '3':
-                    digitalWrite(RELAY3, HIGH);
-                    break;
-                case '4':
-                    digitalWrite(RELAY4, HIGH);
-                    break;
+                uint8_t signal = LOW;
+                if ('O' == c)
+                    signal = HIGH;
+                else if ('F' == c)
+                    signal = LOW;
 
-                default:
-                    break;
-                }
-            }
-            else if (cmd.charAt(0) == 'F')
-            {
-                char relay = cmd.charAt(1);
-                switch (relay)
-                {
-                case '1':
-                    digitalWrite(RELAY1, LOW);
-                    break;
-                case '2':
-                    digitalWrite(RELAY2, LOW);
-                    break;
-                case '3':
-                    digitalWrite(RELAY3, LOW);
-                    break;
-                case '4':
-                    digitalWrite(RELAY4, LOW);
-                    break;
+                char relayNum[2] = { 0 };
+                relayNum[0] = cmd.charAt(1);
+                int relayIndex = atoi(relayNum);
 
-                default:
-                    break;
-                }
+                if (relayIndex >= 1 && relayIndex <= 3)
+                    digitalWrite(RELAY_PINS[relayIndex - 1], signal);
             }
         }
 
